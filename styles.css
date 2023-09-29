@@ -3,12 +3,12 @@ body {
     background-color: #f0f0f0;
 }
 .title {
-    text-align: center;
+    text-align: left;
     margin-top: 50px;
 }
 
 #time {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 
@@ -29,7 +29,7 @@ body {
     height: 0;
     border-left: 75px solid transparent; /* Điều chỉnh kích thước tam giác tại đây */
     border-right: 75px solid transparent;
-    border-bottom: 130px solid #ff00f2; /* Màu và chiều cao tam giác */
+    border-bottom: 130px solid #81197b; /* Màu và chiều cao tam giác */
     border-radius: 0;
     position: absolute;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
