@@ -1,0 +1,11 @@
+/* Định dạng button */
+.random-button {
+    width: 150px;
+    height: 150px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    /* Đặt vị trí tuyệt đối */
+}
