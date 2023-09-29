@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị Button ở Vị Trí Ngẫu Nhiên Bằng jQuery</title>
+    <style>
+        /* Định dạng button */
+        .random-button {
+            width: 100px;
+            height: 30px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            /* Đặt vị trí tuyệt đối */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button id="generateButton" class="random-button">Hiển thị Button ở Vị Trí Ngẫu Nhiên</button>
+
+    <script>
+        var buttonToDelete = document.getElementById("generateButton");
+        // Hàm tạo button và đặt vị trí ngẫu nhiên
+        function createRandomButton() {
+            if (buttonToDelete) {
+                // Xóa button khỏi DOM
+                buttonToDelete.remove();
+            }
+            // Tạo một button mới
+            var button = $('<button id="generateButton">').text("Button");
+
+            // Đặt class cho button để áp dụng CSS
+            button.addClass("random-button");
+
+            // Đặt vị trí ngẫu nhiên trên màn hình
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            var randomX = Math.random() * (screenWidth - 100); // Độ rộng màn hình trừ đi kích thước button
+            var randomY = Math.random() * (screenHeight - 30); // Chiều cao màn hình trừ đi kích thước button
+
+            // Đặt vị trí cho button
+            button.css({
+                left: randomX + "px",
+                top: randomY + "px"
+            });
+
+            // Thêm button vào body
+            $("body").append(button);
+        }
+
+        // Sự kiện click trên nút "Hiển thị Button ở Vị Trí Ngẫu Nhiên"
+        $("#generateButton").click(function () {
+            createRandomButton();
+        });
+    </script>
+</body>
+
+</html>
