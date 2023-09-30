@@ -19,7 +19,8 @@ function createRandomButton() {
     // Tạo một button mới
     var button = $('<button id="generateButton"></button>');
     // Đặt class cho button để áp dụng CSS
-    var cssClass = ["random-button", "triangle-button", "circle-button "];
+    var cssClass = ["random-button", "random1-button", "random2-button", "triangle-button",
+     "circle-button", "circle1-button", "circle2-button"];
     console.log(cssClass[Math.floor(Math.random() * cssClass.length)]); //debug
     // Lấy một phần tử tương ứng với chỉ số ngẫu nhiên từ 0 đến độ dài của mảng
     button.addClass(cssClass[Math.floor(Math.random() * cssClass.length)]);
@@ -30,7 +31,7 @@ function createRandomButton() {
     var randomY = Math.random() * (screenHeight - 150); // Chiều cao màn hình trừ đi kích thước button
     // Đặt vị trí cho button
     button.css({
-        left: randomX + "px",
+        left: randomX + "px" ,
         top: randomY + "px"
     });
     // Lưu thời điểm khi button xuất hiện
